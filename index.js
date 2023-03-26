@@ -91,7 +91,11 @@ const generateContent = async ({count = 50, contentType, topic}) => {
 
   const ts = new Date().toISOString().slice(0, 10)
   // fs.mkdirSync(`${topicFolder}`)
-  fs.mkdirSync(`_posts`)
+  try {
+    fs.mkdirSync(`_posts`)
+  } catch (error) {
+    
+  }
 
   // fs.writeFileSync(`${ts}/response.json`, JSON.stringify(response.data, null, 2))
   // fs.writeFileSync(`${topicFolder}/readme.md`, content)
