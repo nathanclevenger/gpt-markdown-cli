@@ -1,2 +1,3 @@
-# gpt-markdown-cli
-Generate Markdown Files &amp; Folders with Chat GPT
+# gpt-markdown
+
+Generate Markdown Files & Folders with Chat GPT
