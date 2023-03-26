@@ -98,7 +98,7 @@ const generateContent = async ({count = 50, contentType, topic}) => {
   let items = content.split('\n- ').slice(1)
 
   if (items.length === 0) {
-    items = content.split('. ').slice(1).map(i => i.replace('\n', ''))
+    items = content.split('. ').slice(1).map(i => i.split('\n')[0])
   }
 
   const contentSpinner = createSpinner('Asking GPT to generate content for each topic ...').start()
