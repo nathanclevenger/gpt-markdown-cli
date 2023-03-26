@@ -89,7 +89,7 @@ const generateContent = async ({count = 50, contentType, topic}) => {
   const content = response.data.choices[0].message.content
   const topicFolder = slugify(topic)
 
-  const ts = new Date().toISOString().slice(0, 19).replace('T', '-')
+  const ts = new Date().toString()
   fs.mkdirSync(`${topicFolder}`)
 
   // fs.writeFileSync(`${ts}/response.json`, JSON.stringify(response.data, null, 2))
@@ -114,8 +114,8 @@ const generateContent = async ({count = 50, contentType, topic}) => {
       }).then(itemResponse => {
         const content = itemResponse.data.choices[0].message.content
         fs.writeFileSync(`${topicFolder}/${slugify(item)}.md`, `---
-title: ${item}
-created: ${ts}
+title: '${item}'
+date: ${ts}
 ---
 
 ${content}
