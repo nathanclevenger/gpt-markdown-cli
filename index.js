@@ -89,11 +89,11 @@ const generateContent = async ({count = 50, contentType, topic}) => {
   const content = response.data.choices[0].message.content
   const topicFolder = slugify(topic)
 
-  const ts = new Date().toString()
+  const ts = new Date().toISOString().slice(0, 10)
   fs.mkdirSync(`${topicFolder}`)
 
   // fs.writeFileSync(`${ts}/response.json`, JSON.stringify(response.data, null, 2))
-  fs.writeFileSync(`${topicFolder}/readme.md`, content)
+  // fs.writeFileSync(`${topicFolder}/readme.md`, content)
 
   let items = content.split('\n- ').slice(1)
 
@@ -113,7 +113,7 @@ const generateContent = async ({count = 50, contentType, topic}) => {
         ]
       }).then(itemResponse => {
         const content = itemResponse.data.choices[0].message.content
-        fs.writeFileSync(`${topicFolder}/${slugify(item)}.md`, `---
+        fs.writeFileSync(`_posts/${ts}-${slugify(item)}.md`, `---
 title: '${item}'
 date: ${ts}
 ---
