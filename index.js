@@ -108,6 +108,12 @@ const generateContent = async ({count = 50, contentType, topic}) => {
 
   const contentSpinner = createSpinner('Asking GPT to generate content for each topic ...').start()
 
+  // ---
+  // title: '${item}'
+  // date: '${ts}'
+  // ---
+  
+
   // for (const item of items) {
   await Promise.all(items.map(async (item) => {
     return openai.createChatCompletion({
@@ -118,12 +124,7 @@ const generateContent = async ({count = 50, contentType, topic}) => {
         ]
       }).then(itemResponse => {
         const content = itemResponse.data.choices[0].message.content
-        fs.writeFileSync(`_posts/${slugify(item)}.md`, `---
-title: '${item}'
-date: '${ts}'
----
-
-${content}
+        fs.writeFileSync(`_posts/${slugify(item)}.md`, `${content}
 `)
   })}))
   contentSpinner.success({ text: 'GPT has completed generating all of the content for each topic!'})
