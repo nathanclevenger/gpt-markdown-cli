@@ -118,7 +118,7 @@ const generateContent = async ({count = 50, contentType, topic}) => {
         ]
       }).then(itemResponse => {
         const content = itemResponse.data.choices[0].message.content
-        fs.writeFileSync(`_posts/${ts}-${slugify(item)}.md`, `---
+        fs.writeFileSync(`_posts/${slugify(item)}.md`, `---
 title: '${item}'
 date: ${ts}
 ---

@@ -1,6 +1,6 @@
 {
   "name": "gptmd",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Generate Markdown Files & Folders with GPT",
   "main": "./index.js",
   "type": "module",
