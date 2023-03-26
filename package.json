@@ -1,0 +1,23 @@
+{
+  "name": "gpt-markdown-cli",
+  "version": "0.1.0",
+  "description": "Generate Markdown Files & Folders with GPT",
+  "main": "./index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanclevenger/gpt-markdown-cli.git"
+  },
+  "author": "Nathan Clevenger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathanclevenger/gpt-markdown-cli"
+  },
+  "homepage": "https://github.com/nathanclevenger/gpt-markdown-cli#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
+}
