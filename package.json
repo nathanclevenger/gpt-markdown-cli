@@ -1,5 +1,5 @@
 {
-  "name": "gpt-markdown",
+  "name": "gptmd",
   "version": "0.1.0",
   "description": "Generate Markdown Files & Folders with GPT",
   "main": "./index.js",
