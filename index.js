@@ -142,8 +142,8 @@ export const generateContent = async ({contentType, number, topic, output}) => {
   
 ${items.map(item => ` - [${item}](/${slugify(item, { strict: true })})`).join('\n')}
 
-  
-  `
+
+`
 
   fs.appendFileSync(`${output}/index.md`, toc)
 
