@@ -140,7 +140,7 @@ export const generateContent = async ({contentType, number, topic, output}) => {
 
   const toc = `# ${topic}
   
-  ${items.map(item => ` - [${item}](/${slugify(item, { strict: true })})`).join('\n')}
+${items.map(item => ` - [${item}](/${slugify(item, { strict: true })})`).join('\n')}
 
   
   `
