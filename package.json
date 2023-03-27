@@ -1,6 +1,6 @@
 {
   "name": "gptmd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CLI to Generate Markdown Content with GPT",
   "main": "./index.js",
   "type": "module",
