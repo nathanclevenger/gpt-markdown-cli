@@ -1,7 +1,7 @@
 {
   "name": "gptmd",
   "version": "0.1.10",
-  "description": "Generate Markdown Files & Folders with GPT",
+  "description": "CLI to Generate Markdown Content with GPT",
   "main": "./index.js",
   "type": "module",
   "bin": "./index.js",
@@ -21,6 +21,7 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "chalk-animation": "^2.0.3",
+    "commander": "^10.0.0",
     "figlet": "^1.5.2",
     "gradient-string": "^2.0.2",
     "inquirer": "^9.1.5",
