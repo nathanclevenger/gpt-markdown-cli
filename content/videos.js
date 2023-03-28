@@ -7,17 +7,17 @@ import { openai } from '../utils/gpt.js'
 import { createToc } from '../utils/toc.js'
 import { isNext } from '../utils/utils.js'
 
-export const configBlogPosts = program => {
-  program.command('blog')
-    .description('Blog Posts')
-    .argument('[topic]', 'What topic do you want to discuss?', 'How to write a blog post')
+export const configVideos = program => {
+  program.command('videos')
+    .description('Videos')
+    .argument('[topic]', 'What topic do you want to discuss?', 'How to write articles')
     .option('-n, --number <number>', 'How many do you want to write?', '50')
-    .option('-w, --words <words>', 'How many words should be generated per blog post?', '2000')
+    .option('-w, --words <words>', 'How many words should be generated per article?', '2000')
     .option('-o, --output <path>', 'What path should the content be output?', isNext ? path.join('pages/posts') : '_posts')
-    .action((str, options) => args = { contentType: 'Blog', topic: str, ...options })
+    .action((str, options) => args = { contentType: 'Articles', topic: str, ...options })
 }
 
-export const generateBlogPosts = async ({contentType, number, topic, output, words}) => {
+export const generateVideos = async ({contentType, number, topic, output, words}) => {
 
   const topicSpinner = createSpinner(`Asking GPT to generate topics on "${topic}" ...`).start()
 

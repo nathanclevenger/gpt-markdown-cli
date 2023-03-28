@@ -4,7 +4,7 @@ export const itemParser = content =>  {
 
   // Handle if numbered list (occassionally happens, even against instructions)
   if (items.length === 0) {
-    items = content.split('. ').slice(1).map(i => i.split('\n')[0])
+    items = content.split('. ').slice(1).map(i => i.split('\n')[0]).replaceAll('`','').replaceAll('"','')
   }
 
   return items
