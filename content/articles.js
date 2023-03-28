@@ -42,7 +42,7 @@ export const generateArticles = async ({contentType, number, topic, output, word
       model: 'gpt-3.5-turbo',
       messages: [
             {'role': 'system', 'content': 'You are a helpful assistant that only responds in Markdown format that starts with title `# `'},
-            {'role': 'user', 'content': `Respond with a ${words} word blog post on the topic "${item}" which will be posted on a blog about ${topic}.`},
+            {'role': 'user', 'content': `Respond with a ${words} word article on the topic "${item}" which will be posted on a website about ${topic}.`},
         ]
       }).then(itemResponse => {
         const itemContent = itemResponse.data.choices[0].message.content

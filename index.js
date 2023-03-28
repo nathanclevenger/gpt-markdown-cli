@@ -9,15 +9,27 @@ import gradient from 'gradient-string'
 import chalkAnimation from 'chalk-animation'
 
 import { configBlogPosts, generateBlogPosts } from './content/blog-posts.js'
-import { configArticles } from './content/articles.js'
-import { configBook } from './content/book.js'
-import { configDocs } from './content/docs.js'
-import { configLandingPages } from './content/landing-pages.js'
-import { configEmails } from './content/emails.js'
-import { configNewsletter } from './content/newsletter.js'
+import { configArticles, generateArticles } from './content/articles.js'
+import { configBook, generateBook } from './content/book.js'
+import { configDocs, generateDocs } from './content/docs.js'
+import { configLandingPages, generateLandingPages } from './content/landing-pages.js'
+import { configEmails, generateEmails } from './content/emails.js'
+import { configNewsletter, generateNewsletter } from './content/newsletter.js'
+import { configOther, generateOther } from './content/other.js'
+import { configProducts, generateProducts } from './content/products.js'
+import { configVideos, generateVideos } from './content/videos.js'
 
 const generators = {
+  'Articles': generateArticles,
   'Blog Posts': generateBlogPosts,
+  'Book': generateBook,
+  'Documentation': generateDocs,
+  'Email Sequence': generateEmails,
+  'Landing Page': generateLandingPages,
+  'Newsletter': generateNewsletter,
+  'Other': generateOther,
+  'Product': generateProducts,
+  'Video': generateVideos,
 }
 const generateContent = args => {
   generators[args.contentType](args)
@@ -43,7 +55,10 @@ configBook(program)
 configDocs(program)
 configEmails(program)
 configLandingPages(program)
+configOther(program)
 configNewsletter(program)
+configProducts(program)
+configVideos(program)
 
 
 program.action(async () => {
