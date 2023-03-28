@@ -11,6 +11,8 @@ export const createToc = ({topic, content, output}) => {
     
   }
 
+  fs.writeFileSync(`${output}/toc.yaml`, content)
+
   const items = itemParser(content)
 
   const toc = `# ${topic}
