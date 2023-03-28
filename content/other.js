@@ -44,7 +44,7 @@ export const generateOther = async ({contentName, number, topic, title, output, 
     return openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages: [
-            {'role': 'system', 'content': 'You are a helpful assistant that only responds in Markdown format'},
+            {'role': 'system', 'content': `You are a helpful assistant that only responds in Markdown format that starts with ${title} \`# \``},
             {'role': 'user', 'content': `Respond with a ${words} word ${contentName} with a ${title} of "${item}" which will be posted on a website about ${topic}.`},
         ]
       }).then(itemResponse => {
