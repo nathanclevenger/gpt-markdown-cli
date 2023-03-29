@@ -24,6 +24,7 @@ export const generateBlogPosts = async ({contentType, number, topic, output, wor
 
   const response = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
+    // model: 'gpt-4',
     messages: [
           {'role': 'system', 'content': 'You are a helpful assistant that only responds in YAML format arrays.'},
           {'role': 'user', 'content': `Respond with a list of ${number} possible titles of ${contentType} for the topic "${topic}". Do not count the items in the list.`},

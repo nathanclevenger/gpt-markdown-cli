@@ -51,3 +51,27 @@
  - [The Startup Revolution](/The-Startup-Revolution)
 
 
+# Coding
+  
+ - [Code My Heart](/Code-My-Heart)
+ - [Syntax Error in Love](/Syntax-Error-in-Love)
+ - [Coding in the Dark](/Coding-in-the-Dark)
+ - [Byte Me Tonight](/Byte-Me-Tonight)
+ - [Love Loop](/Love-Loop)
+ - [Nerdy Love Error](/Nerdy-Love-Error)
+ - [I Can't Quit You, Parentheses](/I-Cant-Quit-You-Parentheses)
+ - [Debugger Crush](/Debugger-Crush)
+ - [Boot Up My Heart](/Boot-Up-My-Heart)
+ - [Coded Emotions](/Coded-Emotions)
+ - [Ctrl + Alt + Love](/Ctrl-Alt-Love)
+ - [Binary Love Affair](/Binary-Love-Affair)
+ - [Love in HTML](/Love-in-HTML)
+ - [Pythonic Romance](/Pythonic-Romance)
+ - [Code Whispers](/Code-Whispers)
+ - [Infinite Loop of Love](/Infinite-Loop-of-Love)
+ - [Love Encoded](/Love-Encoded)
+ - [Algorithmic Attraction](/Algorithmic-Attraction)
+ - [Git Commitment](/Git-Commitment)
+ - [Love in JavaScript](/Love-in-JavaScript)
+
+
