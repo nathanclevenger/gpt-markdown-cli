@@ -23,7 +23,8 @@ export const generateArticles = async ({contentType, number, topic, output, word
   const topicSpinner = createSpinner(`Asking GPT to generate topics on "${topic}" ...`).start()
 
   const response = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    // model: 'gpt-3.5-turbo',
+    model: 'gpt-4',
     messages: [
           {'role': 'system', 'content': 'You are a helpful assistant that only responds in YAML format arrays.'},
           {'role': 'user', 'content': `Respond with a list of ${number} possible titles of ${contentType} for the topic "${topic}". Do not count the items in the list.`},
@@ -40,7 +41,8 @@ export const generateArticles = async ({contentType, number, topic, output, word
 
   await Promise.all(items.map(async (item) => {
     return openai.createChatCompletion({
-      model: 'gpt-3.5-turbo',
+      // model: 'gpt-3.5-turbo',
+    model: 'gpt-4',
       messages: [
             {'role': 'system', 'content': 'You are a helpful assistant that only responds in Markdown format that starts with title `# `'},
             {'role': 'user', 'content': `Respond with a ${words} word article on the topic "${item}" which will be posted on a website about ${topic}.`},

@@ -40,7 +40,8 @@ export const generateDocs = async ({chapters, number, topic, output, words}) => 
 
   await Promise.all(items.map(async (item) => {
     return openai.createChatCompletion({
-      model: 'gpt-3.5-turbo',
+      // model: 'gpt-3.5-turbo',
+    model: 'gpt-4',
       messages: [
             {'role': 'system', 'content': 'You are a helpful assistant that only responds in Markdown format that starts with title `# `'},
             {'role': 'user', 'content': `Respond with a ${words} word blog post on the topic "${item}" which will be posted on a blog about ${topic}.`},

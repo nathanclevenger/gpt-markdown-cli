@@ -25,7 +25,8 @@ export const generateBook = async ({chapters, sections, topic, output, words}) =
   const topicSpinner = createSpinner(`Asking GPT to generate topics on "${topic}" ...`).start()
 
   const response = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    // model: 'gpt-3.5-turbo',
+    model: 'gpt-4',
     messages: [
           // {'role': 'system', 'content': 'You are a helpful assistant that only responds in YAML format arrays.' },
           // {'role': 'user', 'content': `Respond with ${chapters} chapter titles for a book on the topic "${topic}". `},
